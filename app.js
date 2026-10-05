@@ -91,9 +91,10 @@ async function toggleFullscreen() {
 async function startPresentation() {
   try {
     await document.documentElement.requestFullscreen?.({ navigationUI: 'hide' });
-    startGateEl.classList.add('is-dismissed');
   } catch {
     startFullscreenEl.querySelector('span').textContent = 'F 키로 전체 화면 전환';
+  } finally {
+    startGateEl.classList.add('is-dismissed');
   }
 }
 
