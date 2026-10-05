@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>Moa — 3-of-5 공동계좌</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="viewport" aria-label="Moa 최종 발표">
+    <div class="canvas-frame" id="canvasFrame">
+      <div class="canvas" id="canvas">
+      <div class="ambient-grid" aria-hidden="true"></div>
+      <div class="start-gate" id="startGate">
+        <div class="start-gate-mark" aria-hidden="true"><i></i><i></i><i></i></div>
+        <button type="button" id="startFullscreen">
+          <strong>전체 화면으로 시작</strong>
+          <span>클릭 후 발표 진행</span>
+        </button>
+        <small>Esc 전체 화면 종료</small>
+      </div>
+
+      <section class="slide slide-cover is-active" data-slide="1" data-tone="continue" aria-label="표지">
+        <div class="cover-copy">
+          <p class="edition">Moa final presentation</p>
+          <h1>Moa</h1>
+          <p class="cover-subtitle">3-of-5 공동계좌</p>
+          <p class="cover-thesis">승인 조건의 실행 시점까지 보존</p>
+        </div>
+        <div class="orbit" aria-label="5명 중 3명 승인">
+          <div class="orbit-ring"></div>
+          <span class="orbit-node approved" style="--angle:0deg;--delay:.22s">A</span>
+          <span class="orbit-node approved" style="--angle:72deg;--delay:.32s">B</span>
+          <span class="orbit-node approved" style="--angle:144deg;--delay:.42s">C</span>
+          <span class="orbit-node" style="--angle:216deg;--delay:.52s">D</span>
+          <span class="orbit-node" style="--angle:288deg;--delay:.62s">E</span>
+          <strong class="orbit-score">3 / 5</strong>
+        </div>
+        <div class="rail rail-cover" aria-hidden="true"><i></i></div>
+      </section>
+
+      <section class="slide" data-slide="2" data-tone="continue" aria-label="승인과 거래 안전성">
+        <header class="slide-header"><h2>세 명의 승인과 거래 안전성</h2></header>
+        <div class="question-layout">
+          <div class="approval-count fragment" data-step="1"><strong>3 / 5</strong><span>승인 완료</span></div>
+          <p class="but fragment" data-step="2">그러나</p>
+          <div class="meaning-stack">
+            <p class="intent-text fragment" data-step="2">승인 내용</p>
+            <span class="gap-line fragment" data-step="3"></span>
+            <p class="execution-text fragment" data-step="3">실제 실행 내용</p>
+            <p class="match-text fragment" data-step="4">승인과 실행의 일치</p>
+          </div>
+        </div>
+        <div class="rail" aria-hidden="true"><i></i></div>
+      </section>
+
+      <section class="slide video-slide" data-slide="3" data-tone="continue" aria-label="Happy Path 시연">
+        <header class="slide-header"><h2>Happy Path</h2><time>00:50</time></header>
+        <div class="video-shell" data-video-shell>
+          <video preload="metadata" playsinline>
+            <source src="assets/happy-path.mp4" type="video/mp4" />
+          </video>
+          <div class="video-overlay">
+            <p>제주도 숙소 결제</p>
+            <button class="play-button" type="button" aria-label="Happy Path 영상 재생"><span></span></button>
+            <small>assets/happy-path.mp4</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-slide="4" data-tone="continue" aria-label="3-of-5 공동계좌">
+        <header class="slide-header"><h2>3-of-5 공동계좌</h2></header>
+        <div class="account-flow">
+          <div class="owners" aria-label="다섯 명의 소유자">
+            <span class="owner fragment" data-step="1">A</span>
+            <span class="owner fragment" data-step="2">B</span>
+            <span class="owner fragment" data-step="3">C</span>
+            <span class="owner">D</span>
+            <span class="owner">E</span>
+          </div>
+          <div class="consent-copy fragment" data-step="3">세 명의 동의</div>
+          <div class="flow-arrow fragment" data-step="4" aria-hidden="true"><i></i></div>
+          <div class="proposal fragment" data-step="4">
+            <span>Proposal</span>
+            <strong>제주도 숙소</strong>
+            <b>0.32 ETH</b>
+            <em>READY 3/5</em>
+          </div>
+        </div>
+        <div class="rail" aria-hidden="true"><i></i></div>
+      </section>
+
+      <section class="slide" data-slide="5" data-tone="interrupt" aria-label="독립 방어선">
+        <header class="slide-header"><h2>세 개의 서명, 하나의 방어선</h2></header>
+        <div class="convergence">
+          <div class="signer-row">
+            <span>A</span><span>B</span><span>C</span>
+          </div>
+          <svg class="converge-lines fragment" data-step="1" viewBox="0 0 520 240" aria-hidden="true">
+            <path d="M20 30 C190 30 250 120 500 120" />
+            <path d="M20 120 H500" />
+            <path d="M20 210 C190 210 250 120 500 120" />
+          </svg>
+          <div class="shared-surface fragment" data-step="1"><strong>같은 화면</strong><span>같은 장비 · 같은 절차</span></div>
+        </div>
+        <p class="defense-equation fragment" data-step="2">서명자 수 ≠ 독립 방어선 수</p>
+        <div class="rail rail-interrupt" aria-hidden="true"><i></i></div>
+      </section>
+
+      <section class="slide" data-slide="6" data-tone="interrupt" aria-label="멀티시그 실패 사례">
+        <header class="slide-header"><h2>멀티시그의 세 가지 실패</h2></header>
+        <div class="failure-cases">
+          <article class="failure-case bybit fragment" data-step="1"><span>Bybit</span><strong>표시</strong><p>본 내용 ≠ 실행 내용</p></article>
+          <article class="failure-case humanity fragment" data-step="2"><span>Humanity</span><strong>보관</strong><p>여러 키<br />같은 장비</p></article>
+          <article class="failure-case drift fragment" data-step="3"><span>Drift</span><strong>시간</strong><p>서명 시점 ≠ 실행 시점</p></article>
+        </div>
+        <div class="common-failure fragment" data-step="4"><span>공통점</span><strong>하나의 침해로 여러 승인 동시 무력화</strong></div>
+        <div class="rail rail-interrupt" aria-hidden="true"><i></i></div>
+      </section>
+
+      <section class="slide" data-slide="7" data-tone="continue" aria-label="Chain of Custody">
+        <header class="slide-header"><h2>승인의 의미가 이동하는 경로</h2></header>
+        <p class="coc-name">Chain of Custody</p>
+        <div class="custody-path">
+          <div class="custody-track" aria-hidden="true"></div>
+          <span class="custody-stop fragment" data-step="1">코드</span>
+          <span class="custody-stop fragment" data-step="2">표시</span>
+          <span class="custody-stop fragment" data-step="3">승인</span>
+          <span class="custody-stop fragment" data-step="4">시간</span>
+          <span class="custody-stop final fragment" data-step="5">실행</span>
+          <i class="custody-signal" aria-hidden="true"></i>
+        </div>
+        <p class="coc-thesis fragment" data-step="5">거래 의미의 종단 간 보존</p>
+        <div class="rail" aria-hidden="true"><i></i></div>
+      </section>
+
+      <section class="slide" data-slide="8" data-tone="resolve" aria-label="Moa 실행 조건">
+        <header class="slide-header"><h2>Moa의 실행 조건</h2></header>
+        <div class="condition-formula">
+          <strong class="fragment" data-step="1">3 Approvals</strong>
+          <i class="fragment" data-step="2">+</i>
+          <strong class="fragment" data-step="2">Valid Intent</strong>
+          <i class="fragment" data-step="3">+</i>
+          <strong class="match fragment" data-step="3">Match</strong>
+        </div>
+        <p class="condition-result fragment" data-step="4">단일 조건 실패 시 실행 차단</p>
+        <div class="rail rail-resolve" aria-hidden="true"><i></i></div>
+      </section>
+
+      <section class="slide" data-slide="9" data-tone="resolve" aria-label="Intent">
+        <header class="slide-header"><h2>Intent</h2></header>
+        <div class="intent-flow">
+          <div class="intent-fields">
+            <strong class="fragment" data-step="1">0xHOTEL</strong>
+            <strong class="fragment" data-step="1">0.32 ETH</strong>
+            <strong class="fragment" data-step="1">23:59까지</strong>
+          </div>
+          <div class="hash-arrow fragment" data-step="2" aria-hidden="true"><i></i></div>
+          <div class="hash-block fragment" data-step="2"><span>intentHash</span><strong>0x8A21…D04F</strong><p>승인한 조건의 지문</p></div>
+        </div>
+        <div class="rail rail-resolve" aria-hidden="true"><i></i></div>
+      </section>
+
+      <section class="slide video-slide" data-slide="10" data-tone="interrupt" aria-label="Attack Path 시연">
+        <header class="slide-header"><h2>Attack Path</h2><time>01:05</time></header>
+        <div class="video-shell attack" data-video-shell>
+          <video preload="metadata" playsinline>
+            <source src="assets/attack-path.mp4" type="video/mp4" />
+          </video>
+          <div class="video-overlay">
+            <p>HOTEL을 ATTACKER로 변경</p>
+            <button class="play-button" type="button" aria-label="Attack Path 영상 재생"><span></span></button>
+            <small>assets/attack-path.mp4</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" data-slide="11" data-tone="interrupt" aria-label="실행 차단 결과">
+        <header class="slide-header"><h2>3-of-5 통과 후에도 실행 차단</h2></header>
+        <div class="check-list">
+          <div class="check-row fragment" data-step="1"><span>Threshold</span><b class="pass">PASS</b></div>
+          <div class="check-row fragment" data-step="2"><span>Intent</span><b class="pass">PASS</b></div>
+          <div class="check-row fragment" data-step="3"><span>Time</span><b class="pass">PASS</b></div>
+          <div class="check-row fragment" data-step="4"><span>Execution Match</span><b class="fail">FAIL</b></div>
+        </div>
+        <div class="blocked fragment" data-step="5">EXECUTION BLOCKED</div>
+        <div class="rail rail-blocked" aria-hidden="true"><i></i></div>
+      </section>
+
+      <section class="slide slide-closing" data-slide="12" data-tone="resolve" aria-label="결론">
+        <header class="slide-header"><h2>서명 조건의 실행 시점까지 보존</h2></header>
+        <div class="closing-formula">
+          <div class="fragment" data-step="1"><strong>3-of-5</strong><span>공동 의사결정</span></div>
+          <i class="fragment" data-step="2">+</i>
+          <div class="fragment" data-step="2"><strong>Intent Match</strong><span>실행 정합성</span></div>
+        </div>
+        <div class="closing-line fragment" data-step="3"><b>Moa</b><span>승인 숫자와 실행 내용을 함께 검증</span></div>
+        <div class="rail rail-final" aria-hidden="true"><i></i></div>
+      </section>
+
+      <div class="deck-status" aria-live="polite"><span id="slideNumber">01</span><i></i><span>12</span></div>
+      <div class="help" id="help" hidden>
+        <div><strong>조작</strong><span>왼쪽 클릭 · → · Space 다음</span><span>오른쪽 클릭 · ← 이전</span><span>영상 클릭 · Enter 재생</span><span>F 전체 화면</span><span>N 발표자 노트</span><span>H 도움말</span></div>
+      </div>
+      <aside class="speaker-notes" id="speakerNotes" hidden><span>발표자 노트</span><p id="speakerNoteText"></p></aside>
+      </div>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
